@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color: white;
+}
+
+.content-degrade{
+    content: "";
+    background: rgb(9,86,121);
+    background: linear-gradient(90deg, rgba(9,86,121,0.7287289915966386) 0%, rgba(12,0,255,0) 100%);
+    
+    position: absolute;
+    /* top: 13%; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    /* margin-top: 5em;
+    margin-bottom: 5.1em; */
+}
+
+footer {
+    background-color: #0e3b63;
+    color: white;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center
+}
+
+.align-items-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+
+
+/* Estilos generales de la tarjeta */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+    border-radius: 1.25rem;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+  
+  /* Estilos del encabezado de la tarjeta */
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* Estilos del cuerpo de la tarjeta */
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  /* Estilos del título de la tarjeta */
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos del subtítulo de la tarjeta */
+  .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos del pie de la tarjeta */
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Estilos de la imagen superior de la tarjeta */
+  .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+  
+  /* Estilos de la lista en la tarjeta */
+  .list-group {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  .list-group-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+  /* Estilos de los enlaces en la tarjeta */
+  .card-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .card-link:hover {
+    text-decoration: underline;
+  }
+  

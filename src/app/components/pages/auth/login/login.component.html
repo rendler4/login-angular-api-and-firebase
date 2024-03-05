@@ -1,0 +1,59 @@
+<!-- <p>login works!</p> -->
+
+<div class="content-degrade"></div>
+<div class="bg-image"></div>
+<div id="contenedor"  class="align-items-center text-center">
+    <div>
+      <section class="login card">
+        <div style="margin: 1.2em;">
+        <h2>Inicio de sesión</h2>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username" formControlName="username" placeholder="Ingresa tu usuario">
+          <span class="alert-danger" *ngIf="formulario.get('username')?.errors?.['required']" >El usuario es obligatorio</span>
+          <span class="alert-danger" *ngIf="formulario.get('username')?.errors?.['pattern']" >El password no puede tener espacios en blanco ni los siguientes caracteres:  {{'|&#~'}}</span>
+          <span class="alert-danger" *ngIf="formulario.get('username')?.errors?.['maxLength']" >El password debe tener como máximo 20 caracteres</span>
+          <label for="password">Clave:</label>
+          <input type="password" id="password" name="password" formControlName="password" placeholder="Ingresa tu contraseña">
+          <span class="alert-danger" *ngIf="formulario.get('password')?.errors?.['required']" >El password es obligatorio</span>
+          <span class="alert-danger" *ngIf="formulario.get('password')?.errors?.['pattern']" >El password no puede tener espacios en blanco</span>
+          <span class="alert-danger" *ngIf="formulario.get('password')?.errors?.['maxLength']" >El password debe tener como máximo 20 caracteres</span>
+          
+
+          <a>¿Olvidaste tu contraseña?</a>
+
+          <div style="display: flex;justify-content: center;">
+            <button type="submit" [disabled]="formulario.invalid" [ngClass]="{'estilo-desactivado': formulario.invalid}" >Validar</button>
+          </div>
+        </form>
+        </div>
+      </section>
+    </div>
+    <div class="content-slider" >
+      <!-- <p>Contenido de la segunda columna.</p> -->
+      <!-- <div class="slider-container">  
+        <img
+          class="slider-item"
+          src="../../../../../assets/images/banner/1.png"
+          width="400"
+          height="300"
+        />
+        <img
+          class="slider-item"
+          src="../../../../../assets/images/banner/2.png"
+          width="400"
+          height="300"
+        />
+        <img
+          class="slider-item"
+          src="../../../../../assets/images/banner/3.png"
+          width="400"
+          height="300"
+        />
+      </div> -->
+
+
+
+      <app-carrousel></app-carrousel>
+    </div>
+</div>
